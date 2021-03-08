@@ -13,12 +13,12 @@ router
 router.route('/tour-stats').get(tourController.getTourStats);
 router.route('/monthly-plan/:year').get(tourController.getMonthlyPlan);
 
-router //
+router
 	.route('/')
 	.get(authController.protect, tourController.getAllTours)
 	.post(tourController.createTour);
 
-router //
+router
 	.route('/:id')
 	.get(tourController.getTour)
 	.patch(tourController.updateTour)
