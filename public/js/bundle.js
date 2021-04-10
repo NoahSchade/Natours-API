@@ -8608,7 +8608,7 @@ var logout = /*#__PURE__*/function () {
 
           case 3:
             res = _context2.sent;
-            if (res.data.status = 'success') window.location.replace(window.location.href);
+            if (res.data.status = 'success') location.reload(true);
             _context2.next = 10;
             break;
 
