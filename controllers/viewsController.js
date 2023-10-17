@@ -61,6 +61,18 @@ exports.getLoginForm = (req, res) => {
 		});
 };
 
+exports.getSignUpForm = (req, res) => {
+	res
+		.status(200)
+		.set(
+			'Content-Security-Policy',
+			"connect-src 'self' https://cdnjs.cloudflare.com"
+		)
+		.render('signUp', {
+			title: 'Sign Up for an Account'
+		});
+};
+
 exports.getAccount = (req, res) => {
 	res.status(200).render('account', {
 		title: 'Your account'
